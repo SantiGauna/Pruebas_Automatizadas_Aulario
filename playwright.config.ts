@@ -10,6 +10,5 @@ export default defineConfig({
   },
   reporter: [
     ['list'],
-    ['allure-playwright'],
   ],
 });
