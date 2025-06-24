@@ -24,7 +24,8 @@ test('Editar el último equipamiento creado', async ({ page }) => {
   await page.waitForTimeout(1000); // esperar un poco para que filtre la lista
 
   // Hacer clic en el botón/ícono de editar del equipamiento
- await page.locator(`tr:has-text("${nombreEquipamiento}") button[mattooltip="Editar"]`).click();
+ await page.locator(`tr:has-text("${nombreEquipamiento}") button[mattooltip="Editar"]`).first().click();
+
 
 
   // Cambiar el nombre (ejemplo: agregar " - Editado")
