@@ -1,0 +1,31 @@
+name: Playwright Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: 🧰 Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Instalar dependencias
+        run: npm ci
+
+      - name: 📥 Instalar Playwright y dependencias
+        run: npx playwright install --with-deps
+
+      - name: 🚀 Ejecutar tests personalizados
+        run: node run-test.js
+
+      - name: 📦 Subir reporte HTML como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
