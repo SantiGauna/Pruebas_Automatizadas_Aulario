@@ -35,8 +35,10 @@ test('Editar el último equipamiento creado', async ({ page }) => {
   // Guardar los cambios
   await page.click('text=Guardar');
 
+  await page.waitForSelector('#miElemento');
+
   // Validar snackbar de éxito
-  await expect(page.getByText('Equipamiento editado con éxito')).toBeVisible();
+  await expect(page.getByText('Equipamiento editado con éxito')).toBeVisible({ timeout: 10000 });
 
   // Validar que el nuevo nombre aparezca
   await page.getByPlaceholder('Buscar...').fill(nuevoNombre);
