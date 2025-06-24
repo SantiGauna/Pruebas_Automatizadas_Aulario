@@ -4,19 +4,8 @@ import fs from 'fs';
 
 // Función fuera del test para reutilizarla
 function generarNombreEquipamiento(): string {
-  const path = 'contador.txt';
-  let numero = 1;
-
-  if (fs.existsSync(path)) {
-    const contenido = fs.readFileSync(path, 'utf-8');
-    const anterior = parseInt(contenido.trim(), 10);
-    if (!isNaN(anterior)) {
-      numero = anterior >= 1000 ? 1 : anterior + 1;
-    }
-  }
-
-  fs.writeFileSync(path, numero.toString());
-  return `Nuevo Equipamiento ${numero}`;
+  const numeroAleatorio = Math.floor(1000 + Math.random() * 9000); // número entre 1000 y 9999
+  return `Nuevo Equipamiento ${numeroAleatorio}`;
 }
 
 test('Creación de Nuevo Equipamiento', async ({ page }) => {

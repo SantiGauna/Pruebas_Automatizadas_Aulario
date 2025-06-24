@@ -9,8 +9,7 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   reporter: [
-    ['list'], // reporte en consola
-    ['html', { outputFolder: 'playwright-report', open: 'never' }], // HTML offline
-    ['json', { outputFile: 'report.json' }] // opcional, para CI o análisis
+    ['list'],
+    ['allure-playwright'],
   ],
 });

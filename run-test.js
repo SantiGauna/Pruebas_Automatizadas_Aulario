@@ -5,16 +5,19 @@ const tests = [
   'tests/Equipamiento/nuevo_equipamiento.spec.ts',
   'tests/Equipamiento/editar_equipamiento.spec.ts',
   'tests/Equipamiento/filtros_equipamiento.spec.ts',
-  
 ];
 
-function runTest(path) {
-  console.log(`Ejecutando: ${path}`);
-  execSync(`npx playwright test ${path}`, { stdio: 'inherit' });
+function runTest(testPath) {
+  console.log(`🔹 Ejecutando: ${testPath}`);
+  execSync(`npx playwright test ${testPath}`, {
+    stdio: 'inherit',
+  });
 }
 
 (async () => {
   for (const test of tests) {
     runTest(test);
   }
+
+  console.log('✅ Todas las pruebas completadas.');
 })();
