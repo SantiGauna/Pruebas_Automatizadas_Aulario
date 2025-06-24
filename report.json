@@ -65,14 +65,14 @@
   },
   "suites": [
     {
-      "title": "Equipamiento\\filtros_equipamiento.spec.ts",
-      "file": "Equipamiento/filtros_equipamiento.spec.ts",
+      "title": "Equipamiento\\nuevo_equipamiento.spec.ts",
+      "file": "Equipamiento/nuevo_equipamiento.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Ingreso a la sección de Equipamientos",
-          "ok": true,
+          "title": "Creación de Nuevo Equipamiento",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -85,23 +85,55 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 12493,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 31379,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\santiago.gauna\\Desktop\\Aulario\\tests\\Equipamiento\\nuevo_equipamiento.spec.ts",
+                        "column": 44,
+                        "line": 48
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Buscar...')\u001b[22m\n\u001b[2m    - locator resolved to <input matinput=\"\" id=\"mat-input-0\" aria-invalid=\"false\" aria-required=\"false\" placeholder=\"Buscar...\" _ngcontent-ng-c135254692=\"\" class=\"mat-mdc-input-element ng-tns-c3736059725-3 mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    40 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[0m \u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'text=\"Crear\"'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Buscar...'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Buscar...'\u001b[39m)\u001b[33m.\u001b[39mfill(nombreEquipamiento)\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m\n \u001b[90m 51 |\u001b[39m   \u001b[90m//Valido el snackbar\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\santiago.gauna\\Desktop\\Aulario\\tests\\Equipamiento\\nuevo_equipamiento.spec.ts:48:44\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-24T16:13:36.249Z",
+                  "startTime": "2025-06-24T18:08:58.332Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\santiago.gauna\\Desktop\\Aulario\\test-results\\Equipamiento-nuevo_equipam-a7a0d-ación-de-Nuevo-Equipamiento\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\santiago.gauna\\Desktop\\Aulario\\test-results\\Equipamiento-nuevo_equipam-a7a0d-ación-de-Nuevo-Equipamiento\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\santiago.gauna\\Desktop\\Aulario\\test-results\\Equipamiento-nuevo_equipam-a7a0d-ación-de-Nuevo-Equipamiento\\error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "c3934e5da6b40ed4b9f9-0bafd17515824f07fd03",
-          "file": "Equipamiento/filtros_equipamiento.spec.ts",
-          "line": 5,
+          "id": "e82881a78d7319af099c-550614cb8387af4d2e2c",
+          "file": "Equipamiento/nuevo_equipamiento.spec.ts",
+          "line": 22,
           "column": 5
         }
       ]
@@ -109,11 +141,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-24T16:13:35.262Z",
-    "duration": 13673.765000000001,
-    "expected": 1,
+    "startTime": "2025-06-24T18:08:57.573Z",
+    "duration": 32344.367,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
