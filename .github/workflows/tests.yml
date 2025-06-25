@@ -1,4 +1,4 @@
-name: Aulario Tests
+name: Aulario Tests Manual
 
 on:
   workflow_dispatch:
