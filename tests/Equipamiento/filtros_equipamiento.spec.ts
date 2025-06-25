@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login.page';
 import fs from 'fs';
 
-test('Ingreso a la sección de Equipamientos', async ({ page }) => {
+test('Ingreso a la sección de Equipamientos y validación del último creado', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.goto();

@@ -1,6 +1,16 @@
 name: Playwright Tests
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+    inputs:
+      tipo_test:
+        description: 'Seleccionar qué tipo de tests correr'
+        required: true
+        default: 'equipamientos'
+        type: choice
+        options:
+          - equipamientos
+          - espacios
 
 jobs:
   test:
@@ -13,19 +23,10 @@ jobs:
       - name: 🧰 Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: 📦 Instalar dependencias
         run: npm ci
 
-      - name: 📥 Instalar Playwright y dependencias
-        run: npx playwright install --with-deps
-
-      - name: 🚀 Ejecutar tests personalizados
-        run: node run-test.js
-
-      # - name: 📦 Subir reporte HTML como artefacto
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: playwright-report
-      #     path: playwright-report
+      - name: ▶️ Ejecutar pruebas
+        run: node run-test.js ${{ github.event.inputs.tipo_test }}

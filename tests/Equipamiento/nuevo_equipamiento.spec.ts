@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login.page';
 import fs from 'fs';
+import { generarNumeroAleatorio } from '../../utils/generadores';
 
-// Función fuera del test para reutilizarla
-function generarNombreEquipamiento(): string {
-  const numeroAleatorio = Math.floor(1000 + Math.random() * 9000); // número entre 1000 y 9999
-  return `Nuevo Equipamiento ${numeroAleatorio}`;
-}
+
+const numero = generarNumeroAleatorio();
+const nombreEquipamiento = `Nuevo Equipamiento ${numero}`;
+
 
 test('Creación de Nuevo Equipamiento', async ({ page }) => {
   const loginPage = new LoginPage(page);
@@ -22,8 +22,6 @@ test('Creación de Nuevo Equipamiento', async ({ page }) => {
   // Validación que ingresó a la sección Equipamientos
   await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/equipamiento');
 
-  // Generar nombre con número incremental
-  const nombreEquipamiento = generarNombreEquipamiento();
 
   await page.click('text=Nuevo Equipamiento');
 
