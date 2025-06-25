@@ -15,6 +15,7 @@ on:
 
 jobs:
   test:
+    name: ${{ github.event.inputs.tipo_test }} Test
     runs-on: ubuntu-latest
 
     steps:
