@@ -6,12 +6,12 @@ on:
       tipo_test:
         description: 'Seleccionar qué tipo de tests correr'
         required: true
-        default: 'equipamientos'
+        default: 'Todos'
         type: choice
         options:
-          - equipamientos
-          - espacios
-          - todos
+          - Equipamientos
+          - Espacios
+          - Todos
 
 jobs:
   test:
