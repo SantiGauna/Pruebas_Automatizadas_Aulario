@@ -20,7 +20,10 @@ test('Creación de un Nuevo Sector', async ({ page }) => {
     await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/espacios');
     await page.locator('.mdc-tab__text-label', { hasText: 'Sectores' }).click();
 
-    let numero = generarNumeroAleatorio();;
+    const botonNuevoSector = page.getByRole('button', { name: 'Nuevo sector' });
+    await expect(botonNuevoSector).toBeVisible();
+
+    let numero = generarNumeroAleatorio();
     let nombreSector = `Nuevo Sector ${numero}`;
 
     //Nuevo sector

@@ -9,9 +9,12 @@ test('Ingreso a la sección de Sectores', async ({ page }) => {
     await loginPage.login('2457207', 'SantiG2120');
     await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/');
 
-    await page.locator('app-sidebar').getByText('Sectores', { exact: true }).click();
+    await page.locator('app-sidebar').getByText('Espacios', { exact: true }).click();
     await page.waitForURL('https://d3sonsptsb4oi5.cloudfront.net/espacios');
     await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/espacios');
+    await page.locator('.mdc-tab__text-label', { hasText: 'Sectores' }).click();
+    const botonNuevoSector = page.getByRole('button', { name: 'Nuevo sector' });
+    await expect(botonNuevoSector).toBeVisible();
 
 
     const ultimoSector = fs.readFileSync('ultimoSector.txt', 'utf8').trim();

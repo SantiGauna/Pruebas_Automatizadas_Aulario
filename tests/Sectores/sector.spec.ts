@@ -11,9 +11,12 @@ test('Ingreso a la sección de Sectores', async ({ page }) => {
     await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/');
 
     //Seleccionamos la sección de Sectores
-    await page.locator('app-sidebar').getByText('Sectores', { exact: true }).click();
+    await page.locator('app-sidebar').getByText('Espacios', { exact: true }).click();
 
     //Validación que ingreso a la sección de Sectores
-    await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/sectores');
+    await expect(page).toHaveURL('https://d3sonsptsb4oi5.cloudfront.net/espacios');
+    await page.locator('.mdc-tab__text-label', { hasText: 'Sectores' }).click();
+    const botonNuevoSector = page.getByRole('button', { name: 'Nuevo sector' });
+    await expect(botonNuevoSector).toBeVisible();
 });
 
