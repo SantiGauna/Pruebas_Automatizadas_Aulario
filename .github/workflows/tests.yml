@@ -1,16 +1,17 @@
-name: Playwright Tests
+name: Aulario Tests
 
 on:
-  workflow_dispatch:
-    inputs:
-      tipo_test:
-        description: 'Seleccionar qué tipo de tests correr'
-        required: true
-        default: 'equipamientos'
-        type: choice
-        options:
-          - equipamientos
-          - espacios
+  push:
+    workflow_dispatch:
+      inputs:
+        tipo_test:
+          description: 'Seleccionar qué tipo de tests correr'
+          required: true
+          default: 'equipamientos'
+          type: choice
+          options:
+            - equipamientos
+            - espacios
 
 jobs:
   test:
