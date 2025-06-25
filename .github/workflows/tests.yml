@@ -1,0 +1,36 @@
+name: Aulario Tests Manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      tipo_test:
+        description: 'Seleccionar qué tipo de tests correr'
+        required: true
+        default: 'equipamientos'
+        type: choice
+        options:
+          - equipamientos
+          - espacios
+          - todos
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: 🧰 Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Instalar dependencias
+        run: npm install
+
+      - name: 🌐 Instalar navegadores Playwright
+        run: npx playwright install
+
+      - name: ▶️ Ejecutar pruebas
+        run: node run-test.js ${{ github.event.inputs.tipo_test }}

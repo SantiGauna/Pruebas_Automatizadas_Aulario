@@ -1,0 +1,21 @@
+📘 Ejemplos rápidos:
+Selector	Significa	Ejemplo real
+#usuario	Elemento con id="usuario"	<input id="usuario" />
+.btn-login	Elemento con class="btn-login"	<button class="btn-login">Ingresar</button>
+input[name="email"]	input con name="email"	<input type="text" name="email" />
+button[type="submit"]	Botón de tipo submit	<button type="submit">Enviar</button>
+
+🧪 En Playwright
+
+Editar
+await page.fill('#usuario', 'miNombre');          // ID
+await page.fill('.input-text', 'valor');          // Clase
+await page.click('button[type="submit"]');        // Atributo
+await page.click('text="Siguiente"');             // Texto visible en el botón
+
+await this.page.click('.btn.btn-primary.text-capitalize.btn-lg.btn-rounded.btn-block'); //clase
+
+
+npx playwright test
+node run-test.js
+npx playwright show-report
