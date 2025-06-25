@@ -2,16 +2,17 @@ name: Aulario Tests
 
 on:
   push:
-    workflow_dispatch:
-      inputs:
-        tipo_test:
-          description: 'Seleccionar qué tipo de tests correr'
-          required: true
-          default: 'equipamientos'
-          type: choice
-          options:
-            - equipamientos
-            - espacios
+  workflow_dispatch:
+    inputs:
+      tipo_test:
+        description: 'Seleccionar qué tipo de tests correr'
+        required: true
+        default: 'equipamientos'
+        type: choice
+        options:
+          - equipamientos
+          - espacios
+          - todos
 
 jobs:
   test:
@@ -27,7 +28,10 @@ jobs:
           node-version: '20'
 
       - name: 📦 Instalar dependencias
-        run: npm ci
+        run: npm install
+
+      - name: 🌐 Instalar navegadores Playwright
+        run: npx playwright install
 
       - name: ▶️ Ejecutar pruebas
-        run: node run-test.js ${{ github.event.inputs.tipo_test }}
+        run: node run-test.js ${{ github.event.inputs.tipo_test || 'equipamientos' }}
