@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 
-const tipoTest = process.argv[3];
+const tipoTest = process.argv[2];
 
 const testsEquipamiento = [
   'tests/Equipamiento/equipamientos.spec.ts',
