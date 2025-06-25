@@ -6,3 +6,9 @@ export function generarNumeroAleatorio(): number {
 export function generarNumeroDosDigitos(): number {
   return Math.floor(10 + Math.random() * 90); // entre 10 y 99
 }
+
+
+export function generaLetraAleatorio(): string {
+  const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  return letras.charAt(Math.floor(Math.random() * letras.length));
+}

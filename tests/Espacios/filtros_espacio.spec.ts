@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login.page';
 import fs from 'fs';
 
-test('Ingreso a la sección de Espacios y validación de último creado', async ({ page }) => {
+test('Valido flitros de espacios', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   // Iniciar sesión
@@ -22,7 +22,7 @@ test('Ingreso a la sección de Espacios y validación de último creado', async 
   const buscador = page.getByRole('textbox', { name: 'Buscar' });
   await buscador.click();
   await buscador.fill(ultimoEspacio);
-  await page.waitForTimeout(1000); // Espera leve para carga
+  await page.waitForTimeout(1000); 
 
   // Validar que encontró el espacio
   await expect(page.getByRole('cell', { name: ultimoEspacio })).toBeVisible();
