@@ -31,12 +31,14 @@ function runTest(testPath) {
 (async () => {
   let tests;
 
-  if (tipoTest === 'espacios') {
+  if (tipoTest === 'Espacios') {
     tests = testsEspacio;
-  } else if (tipoTest === 'equipamientos') {
+  } else if (tipoTest === 'Equipamientos') {
     tests = testsEquipamiento;
-  } else if (tipoTest === 'sectores') {
+  } else if (tipoTest === 'Sectores') {
     tests = testsSectores;
+  } else if (tipoTest === 'Todos') {
+    tests = [...testsEspacio, ...testsEquipamiento, ...testsSectores];
   } else {
     console.error(`❌ Tipo de test no válido: ${tipoTest}`);
     process.exit(1);
