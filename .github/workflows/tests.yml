@@ -1,7 +1,6 @@
 name: Aulario Tests
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       tipo_test:
@@ -34,4 +33,4 @@ jobs:
         run: npx playwright install
 
       - name: ▶️ Ejecutar pruebas
-        run: node run-test.js ${{ github.event.inputs.tipo_test || 'equipamientos' }}
+        run: node run-test.js ${{ github.event.inputs.tipo_test }}
