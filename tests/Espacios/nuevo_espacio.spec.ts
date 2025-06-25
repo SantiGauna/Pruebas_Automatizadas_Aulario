@@ -33,7 +33,7 @@ test('Creación de un Nuevo Espacio sin ID', async ({ page }) => {
   await page.click('mat-option >> text=Matteo Ricci');
 
   // Seleccionar ubicación
-  await page.locator('#mat-mdc-form-field-label-8').getByText('Ubicación').click();
+  await page.locator('#mat-mdc-form-field-label-8').getByText('Planta').click();
   await page.getByRole('option', { name: 'PB' }).click();
 
   let numero = generarNumeroDosDigitos();
