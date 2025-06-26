@@ -39,6 +39,4 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: ▶️ Ejecutar pruebas en ${{ matrix.browser }}
-        run: npx playwright test --project=${{ matrix.browser }} tests/${{ github.event.inputs.tipo_test }}
-
-  
+        run: BROWSER=${{ matrix.browser }} node run-test.js ${{ github.event.inputs.tipo_test }}
