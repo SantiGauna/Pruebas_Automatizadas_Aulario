@@ -1,4 +1,4 @@
-🧪 Descripción de pruebas automatizadas
+# 🧪 Descripción de pruebas automatizadas
 
 Este repositorio contiene las pruebas automatizadas, orientadas a validar funcionalidades clave del sistema. Incluyen:
 
@@ -8,7 +8,7 @@ Este repositorio contiene las pruebas automatizadas, orientadas a validar funcio
 
 Estas pruebas permiten detectar regresiones rápidamente y asegurar la estabilidad en diferentes escenarios de uso.
 
-🚀 Instalación y ejecución
+# 🚀 Instalación y ejecución
 
 # Clonar el repositorio
 git clone https://github.com/SantiGauna/Pruebas_Automatizadas_Aulario.git
