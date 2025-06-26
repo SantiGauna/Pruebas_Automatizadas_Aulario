@@ -16,8 +16,12 @@ on:
 
 jobs:
   test:
-    name: ${{ github.event.inputs.tipo_test }} Test
+    name: ${{ github.event.inputs.tipo_test }} Test - ${{ matrix.browser }}
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]
 
     steps:
       - name: 📥 Clonar el repositorio
@@ -32,7 +36,9 @@ jobs:
         run: npm install
 
       - name: 🌐 Instalar navegadores Playwright
-        run: npx playwright install
+        run: npx playwright install --with-deps
 
-      - name: ▶️ Ejecutar pruebas
-        run: node run-test.js ${{ github.event.inputs.tipo_test }}
+      - name: ▶️ Ejecutar pruebas en ${{ matrix.browser }}
+        run: npx playwright test --project=${{ matrix.browser }} tests/${{ github.event.inputs.tipo_test }}
+
+  
