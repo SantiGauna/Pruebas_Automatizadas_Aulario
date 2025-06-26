@@ -36,4 +36,3 @@ jobs:
 
       - name: ▶️ Ejecutar pruebas
         run: node run-test.js ${{ github.event.inputs.tipo_test }}
-        devices: 'Desktop Chrome'
