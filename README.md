@@ -1,6 +1,6 @@
 🧪 Descripción de pruebas automatizadas
 
-Este repositorio contiene las pruebas automatizadas que estuve desarrollando en los últimos días, orientadas a validar funcionalidades clave del sistema. Incluyen:
+Este repositorio contiene las pruebas automatizadas, orientadas a validar funcionalidades clave del sistema. Incluyen:
 
 ✅ Pruebas E2E con Playwright, adaptadas para ejecución en múltiples navegadores y entornos móviles.
 
