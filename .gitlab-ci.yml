@@ -1,0 +1,21 @@
+image: mcr.microsoft.com/playwright:v1.44.1-jammy
+
+stages:
+  - test
+
+variables:
+  TIPO_TEST: "Todos"  # valor por defecto
+
+playwright_manual_test:
+  stage: test
+  script:
+    - npm ci
+    - npx playwright install --with-deps
+    - node run-test.js "$TIPO_TEST"
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+    expire_in: 1 week
+  when: manual
+  allow_failure: false

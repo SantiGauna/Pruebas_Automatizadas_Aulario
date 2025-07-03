@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
@@ -15,6 +15,7 @@ export default defineConfig({
     //   name: 'Webkit',
     //   use: { browserName: 'webkit' },
     // },
+    //  { name: 'iPhone 13', use: devices['iPhone 13'] },
   ],
   use: {
     baseURL: 'https://tuapp.com',

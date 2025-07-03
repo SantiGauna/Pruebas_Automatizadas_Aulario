@@ -12,3 +12,20 @@ export function generaLetraAleatorio(): string {
   const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   return letras.charAt(Math.floor(Math.random() * letras.length));
 }
+
+
+export function generarFechaInicio(): string {
+  const fecha = new Date();
+  const dia = String(fecha.getDate()).padStart(2, '0');
+  const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+  const anio = String(fecha.getFullYear());
+  return `${anio}-${mes}-${dia}`;
+}
+
+export function generarFechaFin(): string {
+  const fecha = new Date();
+  const dia = String(fecha.getDate()).padStart(2, '0');
+  const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+  const anio = String(fecha.getFullYear());
+  return `${anio}-${mes}-${dia}`;
+}

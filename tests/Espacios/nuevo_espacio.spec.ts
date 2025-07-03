@@ -65,6 +65,7 @@ test('Creación de un Nuevo Espacio sin ID', async ({ page }) => {
   const nombreEspacio = `Nuevo Espacio ${numero}`;
 
   await page.waitForTimeout(3000);
+
   // Seleccionar tipo
   await page.getByText('Seleccionar tipo').click();
   await page.getByRole('option', { name: 'Aula' }).click();
