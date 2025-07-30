@@ -35,4 +35,10 @@ jobs:
         run: npx playwright install
 
       - name: ▶️ Ejecutar pruebas
-        run: node run-test.js ${{ github.event.inputs.tipo_test }}
+        run: |
+          if [ "${{ github.event.inputs.tipo_test }}" = "Todos" ]; then
+            npx playwright test tests/auto_generated/**/*.spec.ts
+          else
+            npx playwright test tests/auto_generated/**/${{ github.event.inputs.tipo_test }}*.spec.ts
+          fi
+
