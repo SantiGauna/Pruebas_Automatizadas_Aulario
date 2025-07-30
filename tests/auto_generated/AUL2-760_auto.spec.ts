@@ -1,5 +1,5 @@
-// Auto-generado por Agente 2
-// Issue: AUL2-760 - Fecha: 2025-07-30 14:14:08.695715
+// Auto-generado por Agente 2 con aprendizaje de repo
+// Issue: AUL2-760 - Fecha: 2025-07-30 14:20:47.133451
 
 import { test, expect } from '@playwright/test';
 import { config } from 'dotenv';
@@ -14,32 +14,44 @@ test.describe('AUL2-760 - Casos generados', () => {
   });
 
   test('Visualización de reservas académicas por día', async ({ page }) => {
-    // TODO: Implementar paso 'Seleccionar un día, verificar que las reservas se muestren correctamente en la tabla'
+    // TODO: Seleccionar un día
+    // TODO:  verificar que las reservas se muestren correctamente en la tabla.
     // Validación esperada: Las reservas se visualizan correctamente en la tabla
   });
 
   test('Visualización de reservas académicas por día con filtros', async ({ page }) => {
-    // TODO: Implementar paso 'Seleccionar un día, aplicar filtros (carrera, tipo de espacio), verificar que las reservas se muestren correctamente en la tabla'
+    // TODO: Seleccionar un día
+    // TODO:  aplicar filtros (carrera
+    // TODO:  tipo de espacio)
+    // TODO:  verificar que las reservas se muestren correctamente en la tabla.
     // Validación esperada: Las reservas se visualizan correctamente en la tabla filtradas
   });
 
   test('Visualización de reservas académicas por día sin reservas', async ({ page }) => {
-    // TODO: Implementar paso 'Seleccionar un día sin reservas, verificar que se muestre un mensaje de error'
-    // Validación esperada: Se muestra un mensaje de error: 'No se encontraron reservas'
+    // TODO: Seleccionar un día sin reservas
+    // TODO:  verificar que se muestre un mensaje de error.
+    // Validación esperada: Se muestra un mensaje de error: \'No se encontraron reservas\'
   });
 
   test('Visualización de reservas académicas por día con filtros sin resultados', async ({ page }) => {
-    // TODO: Implementar paso 'Seleccionar un día sin reservas, aplicar filtros (carrera, tipo de espacio), verificar que se muestre un mensaje de error'
-    // Validación esperada: Se muestra un mensaje de error: 'No se encontraron reservas'
+    // TODO: Seleccionar un día sin reservas
+    // TODO:  aplicar filtros (carrera
+    // TODO:  tipo de espacio)
+    // TODO:  verificar que se muestre un mensaje de error.
+    // Validación esperada: Se muestra un mensaje de error: \'No se encontraron reservas\'
   });
 
   test('Visualización de reservas académicas por día con tooltip', async ({ page }) => {
-    // TODO: Implementar paso 'Seleccionar un día, posicionar el cursor sobre una reserva, verificar que se muestre el tooltip correctamente'
+    // TODO: Seleccionar un día
+    // TODO:  posicionar el cursor sobre una reserva
+    // TODO:  verificar que se muestre el tooltip correctamente.
     // Validación esperada: El tooltip se muestra correctamente con los datos de la reserva
   });
 
   test('Visualización de reservas académicas por día con tooltip sin reservas', async ({ page }) => {
-    // TODO: Implementar paso 'Seleccionar un día sin reservas, posicionar el cursor sobre una reserva, verificar que no se muestre el tooltip'
+    // TODO: Seleccionar un día sin reservas
+    // TODO:  posicionar el cursor sobre una reserva
+    // TODO:  verificar que no se muestre el tooltip.
     // Validación esperada: No se muestra el tooltip
   });
 
