@@ -1,5 +1,5 @@
 // Auto-generado por Agente 2 con aprendizaje completo
-// Issue: AUL2-824 - Fecha: 2025-07-30 14:46:13.309775
+// Issue: AUL2-824 - Fecha: 2025-07-30 15:05:02.138202
 
 import { test, expect } from '@playwright/test';
 import { config } from 'dotenv';
