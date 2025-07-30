@@ -1,0 +1,11 @@
+# Manejo de variables de entorno
+python-dotenv==1.0.1
+
+# Interacción con GitHub (commit & push)
+GitPython==3.1.43
+
+# Ejecución de comandos en Playwright y automatización
+subprocess-run==0.0.8
+
+# Si quieres formatear JSON de casos
+orjson==3.10.6
