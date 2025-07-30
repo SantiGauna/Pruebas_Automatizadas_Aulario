@@ -33,6 +33,10 @@ jobs:
 
       - name: 🌐 Instalar navegadores Playwright
         run: npx playwright install
+        
+      - name: Listar tests auto-generados
+        run: ls -l tests/auto_generated
+
 
       - name: ▶️ Ejecutar pruebas
         run: |
