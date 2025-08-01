@@ -1,5 +1,5 @@
 // Auto-generado por Agente 2.0 con contexto Angular
-// Issue: AUL2-757 - Fecha: 2025-08-01 15:02:00.620427
+// Issue: AUL2-757 - Fecha: 2025-08-01 15:29:35.589742
 
 import { test, expect } from '@playwright/test';
 import { config } from 'dotenv';

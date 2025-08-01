@@ -1,5 +1,5 @@
 // Auto-generado por Agente 2.0 con contexto Angular
-// Issue:     Como usuario del sistema Aulario quiero poder - Fecha: 2025-08-01 15:02:00.617432
+// Issue:     Como usuario del sistema Aulario quiero poder - Fecha: 2025-08-01 15:29:35.586739
 
 import { test, expect } from '@playwright/test';
 import { config } from 'dotenv';
